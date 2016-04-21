@@ -1,0 +1,12 @@
+computed -p par.computed
+
+
+1. Inputs in par.computed
+
+
+Genotypes in eigenstrat.format (*.geno, *.snp, *.ind)
+output: output file name
+binsize: Size of bins along genome (cM). Default : 0.01 (Recommended 1e-4)
+maxdis: Maximum distance among SNP pairs (cM). Default: 0.01
+jackknife: Directory to store the results of block jackknife. If this parameter is not specified, then no jackknife is computed.
+

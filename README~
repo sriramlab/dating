@@ -1,0 +1,15 @@
+This tarball contains two programs:
+
+1. computed computes the average pairwise LD as a function of genetic distance. This can then be used to get date estimates by fitting a decay function to the average LD vs distance plot.
+
+2. getposterior computes the corrected date estimates given the uncorrected estimates and estimates of the map error
+
+0. The executables are in the bin directory.
+
+1. The source code is in src. To compile:
+cd src
+make
+make install
+
+
+2. An example can be found in examples

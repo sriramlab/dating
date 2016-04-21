@@ -1,0 +1,9 @@
+SSS: in
+indivname:    SSS.ind
+snpname:      SSS.snp
+genotypename:      SSS.geno
+binsize:      0.00001
+output: computed.out
+maxdis:       0.01
+jackknife: jack
+jackblock: 10

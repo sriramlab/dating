@@ -1,0 +1,13 @@
+SSS: in
+indivname:    SSS.ind
+snpname:      SSS.snp
+genotypename:      SSS.geno
+weightname: SSS.weights
+poplistname: ancestral_pop_info 
+admixlist: admix_pop_info
+binsize:      0.00001
+output: out
+maxdis:       0.01
+jackknife: jack
+filtersnps:  transversions
+jackblock:  10

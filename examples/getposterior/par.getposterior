@@ -1,0 +1,13 @@
+col:  2
+l:  0.02
+h:  1
+inp: rolloff.out
+debug: 1
+alpha: alpha.txt
+output: date.posterior
+print_interval: 10
+glb:    25
+gub:    30
+mcmc_iters: 50
+burnin: 10
+seed:   1

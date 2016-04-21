@@ -1,0 +1,26 @@
+getposterior -p par.getposterior
+
+1. Inputs that need to be specified in par.getposterior
+inp: Output of the LD decay
+alpha: Posterior distribution of alpha
+col:  column of the inp to use (0-based). Default is 2
+l: min value of the bin to use in inp. Default is 0.02 (cM)
+h: max value of the bin to use in inp. Default is 1 (cM)
+glb: lower bound on the number of year per generation
+gub: upper bound on the number of year per generation
+mcmc_iters: number of iterations of mcmc. Default is 1200.
+burnin: number of burnin iterations of mcmc. Default is 200.
+seed: Any number. Default is 1 for reproducibility.
+print_interval: How often to print mcmc out. Default is once every 10 iterations.
+
+
+1. Output  is in file pointed to by output
+
+Three lines: mean, sd, min, max
+1. Uncorrected
+2. Corrected  (in generations)
+3. Corrected (in years)
+
+2. 
+Options in par.getposterior
+col : column

@@ -1,0 +1,45 @@
+#include "../std.h"
+#include "samplealpha.h"
+#include "arms.h"
+
+
+int main ()  {
+
+//	double z[2] = {0,1e-4};
+//	double g[2] = {0,1e-3};	
+	vector<double> z ; z.push_back(0); z.push_back(1e-4);
+	vector<double> g ; g.push_back(0); g.push_back(1e-3);
+	samplealpha  s = samplealpha (2,z,g);
+
+	/*
+	for (int i = 1; i <= 10000; i++){ 
+
+		double y = samplealpha::logd ( i, &s);
+		y = exp(y);
+		cout << i << "\t" << y << endl;
+	}
+	*/
+	srand (1.0);
+
+
+	double xl = 0.001;
+	double xr = 100000;
+	int ninit  = 4;
+	double xinit[4] = {1,10,100,1000};
+	double xsamp[100];
+	double xprev=1000;
+
+
+	for (int i  = 0 ; i < 100000; i++) {
+		double er = arms_simple ( ninit, &xl, &xr, samplealpha::logd, &s, 1, &xprev, xsamp);
+		if (er > 0 ) { 
+			cerr << "Error " << endl;
+			exit (1);
+		}
+		cout << i << "\t" << xsamp[0] << endl; 
+		xprev= xsamp[0];
+	}
+
+}
+
+

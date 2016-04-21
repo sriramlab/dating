@@ -1,0 +1,11 @@
+CC=g++
+CFLAGS= -c -g -I ./include -Wno-write-strings -Wpointer-arith -std=c++0x
+LIB=-lgsl -lgslcblas -lm
+
+all: test 
+
+test: test.o  arms.o
+	g++ -o test test.o arms.o $(LIB)
+
+test.o:test.cpp
+	g++ $(CFLAGS) -c test.cpp
